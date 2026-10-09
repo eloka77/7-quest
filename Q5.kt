@@ -1,6 +1,7 @@
 //Classificação de Feedback de Motoristas
 
 fun avaliarMotorista(nota: Int?) {
+
     val notaFinal = nota ?: 0
 
     when (notaFinal) {
@@ -12,6 +13,12 @@ fun avaliarMotorista(nota: Int?) {
 }
 
 fun main() {
-    avaliarMotorista(5)
-    avaliarMotorista(null)
+    print("Digite a nota do motorista (1 a 5) ou aperte Enter para nulo: ")
+    val entrada = readlnOrNull()
+
+
+    val nota = entrada?.toIntOrNull()
+
+
+    avaliarMotorista(nota)
 }
